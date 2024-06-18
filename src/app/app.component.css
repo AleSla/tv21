@@ -1,0 +1,234 @@
+:host {
+    --bright-blue: oklch(51.01% 0.274 263.83);
+    --electric-violet: oklch(53.18% 0.28 296.97);
+    --french-violet: oklch(47.66% 0.246 305.88);
+    --vivid-pink: oklch(69.02% 0.277 332.77);
+    --hot-red: oklch(61.42% 0.238 15.34);
+    --orange-red: oklch(63.32% 0.24 31.68);
+    --electric-green: oklch(92.66% 0.217 119.78);
+
+    --gray-900: oklch(19.37% 0.006 300.98);
+    --gray-700: oklch(36.98% 0.014 302.71);
+    --gray-400: oklch(70.9% 0.015 304.04);
+
+    --pill-accent: var(--bright-blue);
+
+    font-family: "Montserrat" "SP Ariel BG", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1 {
+    font-size: 3.125rem;
+    color: var(--gray-900);
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.125rem;
+    margin: 0;
+    font-family: "SP Ariel BG", "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+      "Segoe UI Symbol";
+  }
+
+  p {
+    margin: 0;
+    color: var(--gray-700);
+  }
+
+  main, mat-sidenav-content {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: inherit;
+    background: #181818;
+  }
+  
+  mat-sidenav {
+    position: fixed;
+    margin-top: 50px;
+    padding-top: 14px;
+    background: var(--gray-700);
+  }
+
+  mat-toolbar {
+    background: #454545;
+    color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+.logo {
+  width: 72px;
+}
+
+.nav {
+  display: block;
+}
+
+.menuicn {
+  display: none;
+}
+
+.menubtn {
+  color: white !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+}
+
+.menubtn:active {
+  color: var(--electric-green) !important;
+}
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 3rem 0;
+  }
+
+  .content h1 {
+    margin-top: 1.75rem;
+  }
+
+  .content p {
+    margin-top: 1.5rem;
+    color: var(--gray-400);
+  }
+
+
+  .pill-group {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    padding: 1.25rem 0;
+  }
+
+  .pill {
+    display: flex;
+    align-items: center;
+    --pill-accent: var(--electric-green);
+    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);
+    color: var(--pill-accent);
+    padding-inline: 0.75rem;
+    padding-block: 0.375rem;
+    border-radius: 2.75rem;
+    border: 0;
+    transition: background 0.3s ease;
+    font-family: var(--inter-font);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.4rem;
+    letter-spacing: -0.00875rem;
+    text-decoration: none;
+  }
+
+  .pill:hover {
+    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);
+  }
+
+  .pill-group svg {
+    margin-inline-start: 0.25rem;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.73rem;
+    margin-top: 1.5rem;
+  }
+
+  .social-links path {
+    transition: fill 0.3s ease;
+    fill: var(--gray-400);
+  }
+
+  .social-links a:hover svg path {
+    fill: white;
+  }
+
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-block: 1.5rem;
+    background: #222222;
+    color: white;
+    padding: 1.5rem;
+  }
+
+  .footgroup {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .footnav {
+    display: flex;
+    align-items: end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    text-align: right;
+  }
+
+  .footlink {
+    color: var(--gray-400);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footlink:hover {
+    color: white;
+  }
+
+  .copyright {
+    color: var(--gray-400);
+    margin: 9px;
+    text-align: center;
+  }
+
+  @media all and (max-width: 960px) {
+    .nav {
+      display: none;
+    }
+
+    .menuicn {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 681px) {
+    .content {
+      flex-direction: column;
+      width: 100%;
+    }
+    .footnav, .pill-group {
+      align-items: center;
+      text-align: center;
+    }
+  }

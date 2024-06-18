@@ -1,0 +1,184 @@
+<main class="main" loading="lazy">
+  <header>
+    <mat-toolbar>
+      <span class="logo"><a routerLink="/"><img src="assets/tv21-logo.svg" alt=""></a></span>
+      <span class="example-spacer"></span>
+      <div class="nav" fxShow="true" fxHide.lt-md="true">
+        @for (item of [
+        { title: 'Начало', link: '/' },
+        { title: 'Новини', link: '/news' },
+        { title: 'Предавания', link: '/shows' },
+        { title: 'Програма', link: '/schedule' },
+        { title: 'На живо', link: '/live' },
+        { title: 'Контакти', link: '/contacts' },
+      ]; track item.title) {
+        <a
+          mat-button
+          class="menubtn"
+          routerLink="{{item.link}}"
+          routerLinkActive="active"
+        >
+          {{item.title}}
+        </a>
+      }
+      </div>
+      
+      <button mat-icon-button class="searchicn">
+        <mat-icon>search</mat-icon>
+      </button>
+
+      <div fxShow="true" fxHide.gt-md="true">
+      <button mat-icon-button class="menuicn" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill>
+      <mat-sidenav #sidenav fxLayout="column" position="end" [autoFocus]="false">
+        <div class="side-nav" fxLayout="column">
+          @for (item of [
+        { title: 'Начало', link: '/' },
+        { title: 'Новини', link: '/news' },
+        { title: 'Предавания', link: '/shows' },
+        { title: 'Програма', link: '/schedule' },
+        { title: 'На живо', link: '/live' },
+        { title: 'Контакти', link: '/contacts' },
+      ]; track item.title) {
+        <a
+          mat-button
+          class="menubtn"
+          routerLink="{{item.link}}"
+          routerLinkActive="active"
+          (click)="sidenav.toggle()"
+        >
+          {{item.title}}
+        </a>
+      }
+        </div>
+      </mat-sidenav>
+      <mat-sidenav-content fxFlexFill>
+        <div class="content">
+    
+          <!-- <p>Congratulations! Your app is running. 🎉</p> -->
+    
+          <router-outlet/>
+        
+      </div>
+      <footer>
+        <div class="footgroup">
+        <div class="pill-group">
+          @for (item of [
+            { title: 'Съвет за електронни медии', link: 'https://www.cem.bg' },
+            { title: 'Комисия по регулиране на съобщенията', link: 'https://www.crc.bg' },
+            { title: 'Култура Варна', link: 'https://www.varnaculture.bg' },
+            { title: 'Община Варна', link: 'https://varna.bg' },
+          ]; track item.title) {
+            <a
+              class="pill"
+              [href]="item.link"
+              target="_blank"
+              rel="noopener"
+            >
+              <span>{{ item.title }}</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="14"
+                viewBox="0 -960 960 960"
+                width="14"
+                fill="currentColor"
+              >
+                <path
+                  d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"
+                />
+              </svg>
+            </a>
+          }
+        </div>
+        
+        <div class="footnav">
+          @for (item of [
+            { title: 'За нас', link: '/about' },
+            { title: 'Реклама', link: '/advertising'},
+            { title: 'Общи условия', link: '/terms' },
+            { title: 'Политика за поверителност', link: '/privacy' },
+            { title: 'Често задавани въпроси', link: '/faq' },
+            { title: 'Контакти', link: '/contacts' },
+          ]; track item.title) {
+            <a
+              class="footlink"
+              routerLink="{{item.link}}"
+              rel="noopener"
+            >
+              <span>{{ item.title }}</span>
+            </a>
+          }
+        </div>
+      </div>
+        <div class="social-links">
+          <a
+            href="https://www.facebook.com/tv21broadcast"
+            aria-label="Facebook"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              alt="Facebook"
+            >
+            <path d="M25,3C12.85,3,3,12.85,3,25c0,11.03,8.125,20.137,18.712,21.728V30.831h-5.443v-5.783h5.443v-3.848 c0-6.371,3.104-9.168,8.399-9.168c2.536,0,3.877,0.188,4.512,0.274v5.048h-3.612c-2.248,0-3.033,2.131-3.033,4.533v3.161h6.588 l-0.894,5.783h-5.694v15.944C38.716,45.318,47,36.137,47,25C47,12.85,37.15,3,25,3z"></path>
+            </svg>
+          </a>
+          <a
+            href="https://instagram.com/tv21broadcast"
+            aria-label="Instagram"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 26 26"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              alt="Instagram"
+            >
+              <path
+              d="M 7.546875 0 C 3.390625 0 0 3.390625 0 7.546875 L 0 18.453125 C 0 22.609375 3.390625 26 7.546875 26 L 18.453125 26 C 22.609375 26 26 22.609375 26 18.453125 L 26 7.546875 C 26 3.390625 22.609375 0 18.453125 0 Z M 7.546875 2 L 18.453125 2 C 21.527344 2 24 4.46875 24 7.546875 L 24 18.453125 C 24 21.527344 21.53125 24 18.453125 24 L 7.546875 24 C 4.472656 24 2 21.53125 2 18.453125 L 2 7.546875 C 2 4.472656 4.46875 2 7.546875 2 Z M 20.5 4 C 19.671875 4 19 4.671875 19 5.5 C 19 6.328125 19.671875 7 20.5 7 C 21.328125 7 22 6.328125 22 5.5 C 22 4.671875 21.328125 4 20.5 4 Z M 13 6 C 9.144531 6 6 9.144531 6 13 C 6 16.855469 9.144531 20 13 20 C 16.855469 20 20 16.855469 20 13 C 20 9.144531 16.855469 6 13 6 Z M 13 8 C 15.773438 8 18 10.226563 18 13 C 18 15.773438 15.773438 18 13 18 C 10.226563 18 8 15.773438 8 13 C 8 10.226563 10.226563 8 13 8 Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@TV21broadcast"
+            aria-label="Youtube"
+            target="_blank"
+            rel="noopener"
+          >
+            <svg
+              width="29"
+              height="20"
+              viewBox="0 0 29 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              alt="Youtube"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z"
+              />
+            </svg>
+          </a>
+        </div>
+        <span class="copyright">© {{year}} TV21. Всички права запазени.</span>
+      </footer>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+
+  </header>
+  
+</main>

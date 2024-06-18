@@ -1,0 +1,61 @@
+<main>
+    <div class="contactgroup">
+        <div class="coord">
+            <img class="coord-logo" src="../../assets/tv21-logo.svg" alt="">
+            <h2>Мултимедиа ООД</h2>
+            @for (item of [
+            {'icon': 'location_on', 'text': 'Варна 9009, бул. „8-ми Приморски полк“ №115', 'href': 'https://maps.app.goo.gl/SC7mtuAmAELeXHj88'},
+            {'icon': 'phone', 'text': '089 861 8866', 'href': 'tel:+359898618866'},
+            {'icon': 'email', 'text': 'tv21bulgaria@gmail.com', 'href': 'mailto:tv21bulgaria@gmail.com'},
+            ]; track item.text) {
+                <div class="coordgroup">
+                    <mat-icon>{{item.icon}}</mat-icon>
+                    <a href="{{item.href}}">{{item.text}}</a>
+                </div>
+            }
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2907.7656242849175!2d27.9254798!3d43.214405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a454126aa85083%3A0x9409e96d0905747f!2z0JLQsNGA0L3QsCAxMTU!5e0!3m2!1sbg!2sbg!4v1717397452685!5m2!1sbg!2sbg"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <span class="example-spacer"></span>
+            <img class="coord-logo" src="../../assets/CEM-logo.svg" alt="">
+            <h2>Съвет за електронни медии</h2>
+            @for (item of [
+            {'icon': 'location_on', 'text': 'София 1574, бул. "Шипченски проход" 69', 'href': 'https://maps.app.goo.gl/EFYrTFZJNSBeeM3u9'},
+            {'icon': 'phone', 'text': '02/ 97 08 810', 'href': 'tel:+35929708810'},
+            {'icon': 'phone', 'text': '02/ 97 08 812', 'href': 'tel:+35929708812'},
+            {'icon': 'fax', 'text': '02/ 97 33 769', 'href': 'fax:+35929733769'},
+            {'icon': 'email', 'text': 'office@cem.bg', 'href': 'mailto:office@cem.bg'},
+            {'icon': 'language', 'text': 'www.cem.bg', 'href': 'https://www.cem.bg' },
+            ]; track item.text) {
+                <div class="coordgroup">
+                    <mat-icon>{{item.icon}}</mat-icon>
+                    <a href="{{item.href}}" target="_blank">{{item.text}}</a>
+                </div>
+            }
+            <iframe class="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2933.234253379812!2d23.36700131541625!3d42.6775799791669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40aa85dc95a7219b%3A0x21a1217f83a3affd!2sSavet%20Za%20Elektronni%20Medii!5e0!3m2!1sen!2sbg!4v1600353698229!5m2!1sen!2sbg"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="divider"></div>
+        <div class="contform">
+            <p>В случай, че имате въпроси, впечатления или мнения, 
+                свързани с нашата програма, или нашия сайт, можете да използвате 
+                и формата за контакт по-долу. Благодарим ви!</p>
+            <form>
+                <mat-form-field appearance="outline" color="accent">
+                    <mat-label>Име</mat-label>
+                    <input matInput class="namein" placeholder="Пример: Петър Петров">
+                </mat-form-field>
+                <mat-form-field appearance="outline" color="accent">
+                    <mat-label>Електронна поща</mat-label>
+                    <input matInput type="email"placeholder="Пример: name@example.com">
+                </mat-form-field>
+                <mat-form-field appearance="outline" color="accent">
+                    <mat-label>Съобщение</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+                <button mat-raised-button color="accent">Изпрати</button>
+            </form>
+        </div>
+    </div>
+</main>
