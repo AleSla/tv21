@@ -3,7 +3,7 @@
     <mat-toolbar>
       <span class="logo"><a routerLink="/"><img src="assets/tv21-logo.svg" alt=""></a></span>
       <span class="example-spacer"></span>
-      <div class="nav" fxShow="true" fxHide.lt-md="true">
+      <div class="nav">
         @for (item of [
         { title: 'Начало', link: '/' },
         { title: 'Новини', link: '/news' },
@@ -27,16 +27,16 @@
         <mat-icon>search</mat-icon>
       </button>
 
-      <div fxShow="true" fxHide.gt-md="true">
-      <button mat-icon-button class="menuicn" (click)="sidenav.toggle()">
+      <div class="menuicn">
+      <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
       </div>
     </mat-toolbar>
 
-    <mat-sidenav-container fxFlexFill>
-      <mat-sidenav #sidenav fxLayout="column" position="end" [autoFocus]="false">
-        <div class="side-nav" fxLayout="column">
+    <mat-sidenav-container>
+      <mat-sidenav #sidenav position="end" [autoFocus]="false">
+        <div class="side-nav">
           @for (item of [
         { title: 'Начало', link: '/' },
         { title: 'Новини', link: '/news' },
@@ -57,7 +57,7 @@
       }
         </div>
       </mat-sidenav>
-      <mat-sidenav-content fxFlexFill>
+      <mat-sidenav-content>
         <div class="content">
     
           <!-- <p>Congratulations! Your app is running. 🎉</p> -->

@@ -46,10 +46,24 @@
   }
   
   mat-sidenav {
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
     position: fixed;
     margin-top: 50px;
     padding-top: 14px;
     background: var(--gray-700);
+  }
+
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    height: 100%;
   }
 
   mat-toolbar {
@@ -218,7 +232,7 @@
     }
 
     .menuicn {
-      display: block;
+      display: flex;
     }
   }
 
