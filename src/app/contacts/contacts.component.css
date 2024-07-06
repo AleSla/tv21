@@ -78,6 +78,10 @@ h1 {
     flex-direction: column;
     width: 100%;
 }
+.contform h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
 p {
     margin-bottom: 20px;
 }
@@ -98,12 +102,9 @@ button {
     font-weight: 650;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 840px) {
     .contactgroup {
         flex-direction: column;
-    }
-    main {
-        width: auto;
     }
     .example-spacer {
         flex: 0 2rem;

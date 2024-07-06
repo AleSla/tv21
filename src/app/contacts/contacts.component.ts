@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
+import { MaterialModule} from '../material.module';
 
 @Component({
   selector: 'app-contacts',
   standalone: true,
-  imports: [MatIcon, MatFormFieldModule, MatInputModule, MatButtonModule],
+  imports: [MaterialModule],
   templateUrl: './contacts.component.html',
   styleUrl: './contacts.component.css'
 })

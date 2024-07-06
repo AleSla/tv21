@@ -1,1 +1,44 @@
-<p>home works!</p>
+<main loading="lazy">
+    <div id="carouselControls" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <img src="{{ getSlide() }}" alt="slide"/>
+        </div>
+        <div class="controls-group">
+            <button mat-icon-button (click)="getPrev()">
+                <mat-icon>keyboard_arrow_left</mat-icon>
+            </button>
+
+            <button mat-icon-button (click)="getNext()">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </button>
+        </div>
+    </div>
+    <div class="now">
+        <div class="nowgroup">
+            <button mat-button class="time" routerLink="/live">сега</button>
+            <button mat-icon-button routerLink="/live" class="play">
+                <mat-icon>play_arrow</mat-icon>
+            </button>
+        </div>
+        
+        <a href="#" class="info">
+                <h4 class="title">Тутурутка</h4>
+                <div class="progress">
+                    <h5 class="time">21:00</h5>
+                    <mat-progress-bar 
+                        class="progress-bar" 
+                        [mode]="mode" 
+                        [value]="value" 
+                        [bufferValue]="bufferValue"
+                        color="accent">
+                    </mat-progress-bar>
+                </div>
+        </a>
+    </div>
+
+</main>

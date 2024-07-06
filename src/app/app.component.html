@@ -1,6 +1,7 @@
 <main class="main" loading="lazy">
   <header>
     <mat-toolbar>
+      <div class="toolgroup">
       <span class="logo"><a routerLink="/"><img src="assets/tv21-logo.svg" alt=""></a></span>
       <span class="example-spacer"></span>
       <div class="nav">
@@ -32,6 +33,7 @@
         <mat-icon>menu</mat-icon>
       </button>
       </div>
+    </div>
     </mat-toolbar>
 
     <mat-sidenav-container>
@@ -66,8 +68,10 @@
         
       </div>
       <footer>
+        <div class="footcontainer">
         <div class="footgroup">
         <div class="pill-group">
+          <h3>Полезни връзки</h3>
           @for (item of [
             { title: 'Съвет за електронни медии', link: 'https://www.cem.bg' },
             { title: 'Комисия по регулиране на съобщенията', link: 'https://www.crc.bg' },
@@ -97,9 +101,12 @@
         </div>
         
         <div class="footnav">
+          <h3>Още от TV21</h3>
           @for (item of [
             { title: 'За нас', link: '/about' },
             { title: 'Реклама', link: '/advertising'},
+            { title: 'Кариери', link: '/careers'}, 
+            { title: 'Разпространение', link: '/distribution' },
             { title: 'Общи условия', link: '/terms' },
             { title: 'Политика за поверителност', link: '/privacy' },
             { title: 'Често задавани въпроси', link: '/faq' },
@@ -175,6 +182,7 @@
           </a>
         </div>
         <span class="copyright">© {{year}} TV21. Всички права запазени.</span>
+      </div>
       </footer>
       </mat-sidenav-content>
     </mat-sidenav-container>

@@ -1,8 +1,5 @@
 :host {
     --bright-blue: oklch(51.01% 0.274 263.83);
-    --electric-violet: oklch(53.18% 0.28 296.97);
-    --french-violet: oklch(47.66% 0.246 305.88);
-    --vivid-pink: oklch(69.02% 0.277 332.77);
     --hot-red: oklch(61.42% 0.238 15.34);
     --orange-red: oklch(63.32% 0.24 31.68);
     --electric-green: oklch(92.66% 0.217 119.78);
@@ -73,7 +70,14 @@
     right: 0;
     display: flex;
     align-items: center;
+    justify-content: center;
     z-index: 10;
+  }
+  .toolgroup {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    align-items: center;
   }
   .example-spacer {
     flex: 1 1 auto;
@@ -179,16 +183,22 @@
 
   footer {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     bottom: 0;
     left: 0;
     right: 0;
-    padding-block: 1.5rem;
     background: #222222;
     color: white;
-    padding: 1.5rem;
+    padding: 1.5rem 0;
+  }
+  .footcontainer {
+    max-width: 1024px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
   }
 
   .footgroup {
@@ -224,7 +234,7 @@
     text-align: center;
   }
 
-  @media all and (max-width: 960px) {
+  @media all and (max-width: 840px) {
     .nav {
       display: none;
     }

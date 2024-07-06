@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { MatToolbar } from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-
+import { MaterialModule} from './material.module';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, MatToolbar, MatIconModule, 
-    MatButtonModule, RouterLink, RouterLinkActive, MatSidenavModule, ],
+  imports: [RouterOutlet, MaterialModule, RouterLink, RouterLinkActive, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
