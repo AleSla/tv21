@@ -40,5 +40,16 @@
                 </div>
         </a>
     </div>
-
+    <h2>Последни</h2>
+    <div class="cards-group">
+        @for (item of showCards; track item.title) {
+        <mat-card class="card-last">
+            <img mat-card-image src="[showCards.src]" alt="">
+            <mat-card-header>
+                <mat-card-title>{{item.title}}</mat-card-title>
+                <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
+            </mat-card-header>
+        </mat-card>
+    }
+    </div>
 </main>

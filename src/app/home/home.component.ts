@@ -49,6 +49,13 @@ export class HomeComponent {
         value = 32;
         bufferValue = 100;
 
+        public showCards = [
+          {src: 'artlab.png', title: 'ArtLab', subtitle: 'Сезон 1: Епизод 17'},
+          {src: 'glava.png', title: 'С главата надолу', subtitle: 'Сезон 1: Епизод 14'},
+          {src: 'joystick.png', title: 'Joystick', subtitle: 'Сезон 1: Епизод 9'},
+        ];
+
+        
 
 }
 
