@@ -50,12 +50,13 @@ export class HomeComponent {
         bufferValue = 100;
 
         public showCards = [
-          {src: 'artlab.png', title: 'ArtLab', subtitle: 'Сезон 1: Епизод 17'},
-          {src: 'glava.png', title: 'С главата надолу', subtitle: 'Сезон 1: Епизод 14'},
-          {src: 'joystick.png', title: 'Joystick', subtitle: 'Сезон 1: Епизод 9'},
+          {src: './assets/artlab.png', title: 'ArtLab', subtitle: 'Сезон 1: Епизод 17'},
+          {src: './assets/glava.png', title: 'С главата надолу', subtitle: 'Сезон 1: Епизод 14'},
+          {src: './assets/joystick.png', title: 'Joystick', subtitle: 'Сезон 1: Епизод 9'},
         ];
 
-        
-
+/*         let appHome = document.getElementsByTagName('app-home') as HTMLElement;
+        appHome?.style.setProperty({width: fill-available; width: -webkit-fill-available; width: -moz-fill-available;});
+ */
 }
 

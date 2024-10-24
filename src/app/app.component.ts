@@ -14,4 +14,4 @@ export class AppComponent {
   title = 'TV21';
   year: number = new Date().getFullYear();
   
-  }
+}

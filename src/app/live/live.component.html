@@ -1,1 +1,35 @@
-<p>live works!</p>
+<main loading="lazy">
+    <h1>{{ title }}</h1>
+    <div class="player">
+        <video [src]='safeURL' frameborder="0" autoplay loop controls allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></video>
+    </div>
+    <div class="now">
+        <div class="nowgroup">
+            <mat-label class="time">сега</mat-label>
+        </div>
+        <a href="#" class="info">
+                <h4 class="title">Тутурутка</h4>
+                <div class="progress">
+                    <h5 class="time">21:00</h5>
+                    <mat-progress-bar 
+                        class="progress-bar" 
+                        [mode]="mode" 
+                        [value]="value" 
+                        [bufferValue]="bufferValue"
+                        color="accent">
+                    </mat-progress-bar>
+                </div>
+        </a>
+    </div>
+    <div class="now">
+        <div class="nowgroup">
+            <mat-label class="time">следва</mat-label>
+        </div>
+        <a href="#" class="info">
+                <h4 class="title">Joystick</h4>
+                <div class="progress">
+                    <h5 class="time">22:00</h5>
+                </div>
+        </a>
+    </div>
+</main>

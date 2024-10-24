@@ -55,8 +55,8 @@
   .side-nav {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: right;
+    align-items: start;
+    justify-content: left;
     width: 100%;
     height: 100%;
   }
@@ -254,3 +254,9 @@
       text-align: center;
     }
   }
+router-outlet {
+  width: fill-available;
+  width: -webkit-fill-available;
+  width: -moz-fill-available;
+  max-width: 1024px;
+}

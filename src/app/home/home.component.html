@@ -22,7 +22,7 @@
         <div class="nowgroup">
             <button mat-button class="time" routerLink="/live">сега</button>
             <button mat-icon-button routerLink="/live" class="play">
-                <mat-icon>play_arrow</mat-icon>
+                <mat-icon>play_circle</mat-icon>
             </button>
         </div>
         
@@ -44,11 +44,19 @@
     <div class="cards-group">
         @for (item of showCards; track item.title) {
         <mat-card class="card-last">
-            <img mat-card-image src="[showCards.src]" alt="">
+            <img mat-card-image src="{{item.src}}" alt="">
             <mat-card-header>
                 <mat-card-title>{{item.title}}</mat-card-title>
                 <mat-card-subtitle>{{item.subtitle}}</mat-card-subtitle>
             </mat-card-header>
+            <div class="ctabtns">
+                <button mat-icon-button class="play">
+                    <mat-icon>play_arrow</mat-icon>
+                </button>
+                <button mat-icon-button class="info">
+                    <mat-icon>info_outline</mat-icon>
+                </button>
+            </div>
         </mat-card>
     }
     </div>

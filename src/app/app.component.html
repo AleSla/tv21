@@ -40,12 +40,12 @@
       <mat-sidenav #sidenav position="end" [autoFocus]="false">
         <div class="side-nav">
           @for (item of [
-        { title: 'Начало', link: '/' },
-        { title: 'Новини', link: '/news' },
-        { title: 'Предавания', link: '/shows' },
-        { title: 'Програма', link: '/schedule' },
-        { title: 'На живо', link: '/live' },
-        { title: 'Контакти', link: '/contacts' },
+        { title: 'Начало', link: '/', icon: 'home'},
+        { title: 'Новини', link: '/news', icon: 'newspaper' },
+        { title: 'Предавания', link: '/shows', icon: 'movie' },
+        { title: 'Програма', link: '/schedule', icon: 'event_note' },
+        { title: 'На живо', link: '/live', icon: 'live_tv' },
+        { title: 'Контакти', link: '/contacts', icon: 'call' },
       ]; track item.title) {
         <a
           mat-button
@@ -53,7 +53,7 @@
           routerLink="{{item.link}}"
           routerLinkActive="active"
           (click)="sidenav.toggle()"
-        >
+        ><mat-icon>{{item.icon}}</mat-icon>
           {{item.title}}
         </a>
       }
